@@ -5,4 +5,25 @@ my_list = [1, 2, 3, 4, 5]
 count = len(my_list)
 print(count) 
 
+The statement print("{:.6f}".format(round(pos, 6))) does the following:
 
+round(pos, 6):
+
+This rounds the value of the variable pos to 6 decimal places. So if pos is a floating-point number, it will ensure that up to 6 digits after the decimal point are considered in the rounding process.
+"{:.6f}".format(...):
+
+This is a string formatting method. The "..." part is a format string.
+:.6f specifies that the formatted number should have exactly 6 decimal places.
+Even if the number has fewer decimal places after rounding, this formatting will pad it with zeros to always show exactly 6 decimal places.
+print(...):
+
+Finally, print outputs the formatted string to the console.
+Example:
+If pos = 3.14159265358979, the execution of print("{:.6f}".format(round(pos, 6))) would result in:
+
+round(pos, 6) → 3.141593 (rounded to 6 decimal places)
+"{:.6f}".format(...) → '3.141593' (formatted with 6 decimal places)
+print(...) will output:
+Copy code
+3.141593
+So, this statement ensures the output is a floating-point number rounded to exactly 6 decimal places, even if the original number has fewer or more decimal digits.
